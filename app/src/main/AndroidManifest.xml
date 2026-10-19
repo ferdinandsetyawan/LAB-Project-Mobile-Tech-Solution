@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Permissions for Web Service (Volley), SMS Manager API (OTP), and Google Maps -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ConcertX"
+        tools:targetApi="31">
+
+        <!--
+            Google Maps SDK API Key.
+            Replace YOUR_GOOGLE_MAPS_API_KEY_HERE with your actual Google Cloud Maps SDK for Android API Key.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="YOUR_GOOGLE_MAPS_API_KEY_HERE" />
+
+        <!-- 1. Login Page (Launcher Activity) -->
+        <activity
+            android:name=".ui.auth.LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 2. Register Page -->
+        <activity
+            android:name=".ui.auth.RegisterActivity"
+            android:exported="false" />
+
+        <!-- 3. OTP Page -->
+        <activity
+            android:name=".ui.auth.OtpActivity"
+            android:exported="false" />
+
+        <!-- 4. Home Page (with Bottom Navigation: Home, Transaction, Profile) -->
+        <activity
+            android:name=".ui.main.MainActivity"
+            android:exported="false" />
+
+        <!-- 5. Concert Detail Page (with Google Map & Buy Ticket Form) -->
+        <activity
+            android:name=".ui.detail.ConcertDetailActivity"
+            android:exported="false" />
+
+        <!-- 6. Search Page -->
+        <activity
+            android:name=".ui.search.SearchActivity"
+            android:exported="false" />
+
+    </application>
+
+</manifest>

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ConcertX</string>
+    <string name="dont_have_account">Don\'t have an account? Register</string>
+    <string name="already_have_account">Already have an account? Login</string>
+    <string name="resend_code">Resend Code</string>
+    <string name="no_concerts_found">No concerts found</string>
+    <string name="no_transactions">You have no transactions yet</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_transaction">Transaction</string>
+    <string name="nav_profile">Profile</string>
+</resources>
